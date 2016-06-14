@@ -1,10 +1,15 @@
 #include "global.h"
+#include "helpers.h"
+#include "pokeEncounterModifier.h"
+#include "itemModifier.h"
+#include "otherModifiers.h"
+#include "battle/wildModifier.h"
+#include "battle/statsModifier.h"
+
+
 
 #define     add_search_replace(find, replace)   g_find[g_i] = find; g_replace[g_i] = replace; g_i++
 #define     reset_search()						memset(g_find, 0, sizeof(g_find)); memset(g_replace, 0, sizeof(g_replace)); g_i = 0
-#define     WRITEU8(addr, data)                 *(volatile unsigned char*)(addr) = data
-#define     WRITEU16(addr, data)                *(volatile unsigned short*)(addr) = data
-#define     WRITEU32(addr, data)                *(volatile unsigned int*)(addr) = data
 #define     READU8(addr)                        *(volatile unsigned char*)(addr)
 #define     READU16(addr)                       *(volatile unsigned short*)(addr)
 #define     READU32(addr)                       *(volatile unsigned int*)(addr)
@@ -39,7 +44,6 @@ Handle                  fsUserHandle;
 FS_archive              sdmcArchive;
 GAME_PLUGIN_MENU        gamePluginMenu;
 u32                     threadStack[0x1000];
-u32                     IoBasePad = 0xFFFD4000;
 u32                     g_find[10];
 u32                     g_replace[10];
 int                     g_i = 0;
@@ -63,20 +67,6 @@ u32        getCurrentProcessId();
 **
 */
 
-u32     getKey()
-{
-    return (*(vu32*)(IoBasePad) ^ 0xFFF) & 0xFFF;
-}
-
-void     waitKeyChange(u32 key)
-{
-    while (key == getKey());
-}
-
-void     waitKeyUp()
-{
-    while (getKey() != 0);
-}
 
 void     initMenu()
 {
@@ -224,13 +214,25 @@ u32        sub_to_address(void *address, u32 value_to_sub)
     *(u32 *)address -= value_to_sub;
 }
 
-void cloneFillBoxOne() {
+void cloneSlotOneToSlots(int numberOfSlots) {
     int i;
     int theBase = 0x08C9E134;
     int theLength = 0xE8;
-    for(i = 0; i < 0x1E; i++) {
+    for(i = 0; i < numberOfSlots; i++) {
         memcpy((u8*) (i * 0xE8 + 0x08C9E134), (u8*) (0x08C9E134), theLength);
     }
+}
+
+void cloneFillBoxOne() {  // Fill entire box with cloned pokemon
+    cloneSlotOneToSlots(30);
+}
+
+void cloneThruSlotTwelve() {  // Clone from slot 1 to slots 2 through 12
+    cloneSlotOneToSlots(12);
+}
+
+void cloneSinglePkm() {  // Clone from slot one to slot 2 only (just one copy)
+    cloneSlotOneToSlots(2);
 }
 
 /*
@@ -240,12 +242,15 @@ void cloneFillBoxOne() {
 void    initCheatMenu()
 {
     initMenu();
-    addMenuEntry("--- Run Cheat ---"); //Exemple
-    addCheatMenuEntry("Clone fill Box1 Slot1", cloneFillBoxOne, NOTFREEZE);
-    addMenuEntry(" ");
-    addMenuEntry("Special Thanks to Nanquitas");
-    addMenuEntry("for ACNL-NTR-Cheats, which ");
-    addMenuEntry("this plugion is based on.  :)");
+    addMenuEntry("=== 1-time run codes ===");
+    addMenuEntry("-- Cloning codes --");
+    addCheatMenuEntry("Clone Box1Slot1 > entire Box", cloneFillBoxOne, NOTFREEZE);
+    addCheatMenuEntry("Clone Slot1 to slots 2-12", cloneThruSlotTwelve, NOTFREEZE);
+    addCheatMenuEntry("Clone Slot1 to slot 2", cloneSinglePkm, NOTFREEZE);
+    addMenuEntry("=== Toggle codes ===");
+    addMenuEntry("-- Encounter modifier codes --");
+    addMenuEntry(" **COMING SOON?");
+    // addCheatMenuEntry("Force Shiny", shinifyCheat, FREEZE);
     updateMenu();
 }
 
