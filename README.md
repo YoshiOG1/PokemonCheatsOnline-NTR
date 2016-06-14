@@ -5,4 +5,6 @@ This is an NTR CFW cheat plugin for Pokemon OR/AS that allows you to fill the fi
 
 Finally works with online play!  Special thanks to Nanquitas for making this possible.
 
+-------
+
 Original ACNL Cheat plugin by Nanquitas:  https://github.com/Nanquitas/ACNL-NTR-Cheats
