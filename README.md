@@ -31,4 +31,4 @@ This plugin works with online play, too!  Now you can clone Pokemon and Wonder T
 
 Original ACNL Cheat plugin by Nanquitas:  https://github.com/Nanquitas/ACNL-NTR-Cheats
 
-Uses code from PokemonCheatPlugin by @hartmannaf (not all of it is implemented yet):  https://github.com/hartmannaf/PokemonCheatPlugin
+Uses code from PokemonCheatPlugin by hartmannaf (not all of it is implemented yet):  https://github.com/hartmannaf/PokemonCheatPlugin
