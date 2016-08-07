@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Pokemon X/Y/OR/AS Cloning NTR Plugin
 ==============
 
@@ -8,7 +7,6 @@ Pokemon OR/AS Cloning NTR Plugin
 ==============
 
 This is an NTR CFW cheat plugin for Pokemon Omega Ruby / Alpha Sapphire.  Currently, it includes these cheats:
->>>>>>> origin/master
 
 ### One-time run codes (no toggle) ###
 - Clone Pokemon from Box 1 Slot 1 to:
@@ -31,20 +29,13 @@ This is an NTR CFW cheat plugin for Pokemon Omega Ruby / Alpha Sapphire.  Curren
 Currently, that's the only toggle code that I put into this plugin.  More coming soon?
 
 This plugin works with online play, too!  Now you can clone Pokemon and Wonder Trade without exiting the game!  Special thanks to Nanquitas for making the online compatibility possible?
-<<<<<<< HEAD
 
 NOTE: I'm not exactly sure that all the codes will work for X/Y, since I just updated it for X/Y support.  (Crossing my fingers!)
-=======
->>>>>>> origin/master
 
--------
+=======
 
 ## Credits ##
 
 Original ACNL Cheat plugin by Nanquitas:  https://github.com/Nanquitas/ACNL-NTR-Cheats
 
-<<<<<<< HEAD
 Uses code from PokemonCheatPlugin by @hartmannaf (not all of it is implemented yet):  https://github.com/hartmannaf/PokemonCheatPlugin
-=======
-Uses code from PokemonCheatPlugin by hartmannaf (not all of it is implemented yet):  https://github.com/hartmannaf/PokemonCheatPlugin
->>>>>>> origin/master
