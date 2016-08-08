@@ -716,36 +716,36 @@ OUTPUT(a.out elf32-littlearm)
  .debug_line    0x000013f9      0x4ed lib\SOC.o
  .debug_line    0x000018e6      0x177 lib\srv.o
 
-.debug_str      0x00000000     0x17ce
- .debug_str     0x00000000      0xa9f gameplg.o
-                                0xb7f (size before relaxing)
- .debug_str     0x00000a9f       0x59 helpers.o
-                                0x199 (size before relaxing)
- .debug_str     0x00000af8      0x219 itemModifier.o
-                                0x373 (size before relaxing)
- .debug_str     0x00000d11       0x93 otherModifiers.o
-                                0x1db (size before relaxing)
- .debug_str     0x00000da4      0x161 pokeEncounterModifier.o
-                                0x2bf (size before relaxing)
- .debug_str     0x00000f05      0x101 lib\AC.o
+.debug_str      0x00000000     0x17c7
+ .debug_str     0x00000000      0xa98 gameplg.o
+                                0xb78 (size before relaxing)
+ .debug_str     0x00000a98       0x59 helpers.o
+                                0x192 (size before relaxing)
+ .debug_str     0x00000af1      0x219 itemModifier.o
+                                0x36c (size before relaxing)
+ .debug_str     0x00000d0a       0x93 otherModifiers.o
+                                0x1d4 (size before relaxing)
+ .debug_str     0x00000d9d      0x161 pokeEncounterModifier.o
+                                0x2b8 (size before relaxing)
+ .debug_str     0x00000efe      0x101 lib\AC.o
                                 0x1e9 (size before relaxing)
- .debug_str     0x00001006       0x3c lib\entry.o
+ .debug_str     0x00000fff       0x3c lib\entry.o
                                 0x14a (size before relaxing)
- .debug_str     0x00001042      0x163 lib\FS.o
+ .debug_str     0x0000103b      0x163 lib\FS.o
                                 0x367 (size before relaxing)
- .debug_str     0x000011a5       0x94 lib\main.o
+ .debug_str     0x0000119e       0x94 lib\main.o
                                 0x25f (size before relaxing)
- .debug_str     0x00001239       0x33 lib\OS.o
+ .debug_str     0x00001232       0x33 lib\OS.o
                                 0x123 (size before relaxing)
- .debug_str     0x0000126c       0xb0 lib\pm.o
+ .debug_str     0x00001265       0xb0 lib\pm.o
                                 0x229 (size before relaxing)
- .debug_str     0x0000131c      0x1f8 lib\rt.o
+ .debug_str     0x00001315      0x1f8 lib\rt.o
                                 0x4f0 (size before relaxing)
- .debug_str     0x00001514       0x1e lib\sharedfunc.o
+ .debug_str     0x0000150d       0x1e lib\sharedfunc.o
                                 0x22f (size before relaxing)
- .debug_str     0x00001532      0x249 lib\SOC.o
+ .debug_str     0x0000152b      0x249 lib\SOC.o
                                 0x420 (size before relaxing)
- .debug_str     0x0000177b       0x53 lib\srv.o
+ .debug_str     0x00001774       0x53 lib\srv.o
                                 0x1e1 (size before relaxing)
 
 .debug_frame    0x00000000      0xf90

@@ -524,7 +524,7 @@ void shinyB1S1() {
         updateChecksum(&pkm);
         setCurrentPokemon(&pkm);
     }
-    PK6_LOCATION_1 = (u8*)0x081FEEC8;
+    PK6_LOCATION_1 = (u8*)0x081FEBA0;
 }
 
 void shinifyCheat() {  // credit to hartmannaf and Nba_Yoh for this cheat?
@@ -552,7 +552,7 @@ void EncConstToNickB1S1() {  // test that changes the nickname of slot 1 pkm to 
         }
         setCurrentPokemon(&pkm);
     }
-    PK6_LOCATION_1 = (u8*)0x081FEEC8;
+    PK6_LOCATION_1 = (u8*)0x081FEBA0;
 }
 
 void PSVtoNick() {  // Changes nickname of Box1Slot1 Pkm to its Shiny Value (useful for eggs)
@@ -576,7 +576,7 @@ void PSVtoNick() {  // Changes nickname of Box1Slot1 Pkm to its Shiny Value (use
         }
         setCurrentPokemon(&pkm);
     }
-    PK6_LOCATION_1 = (u8*)0x081FEEC8;
+    PK6_LOCATION_1 = (u8*)0x081FEBA0;
 }
 
 void SIDtoNick() {  // Changes nickname of Box1Slot1 Pkm to its OT's Secret ID (only use on an unwanted pokemon)
@@ -596,7 +596,7 @@ void SIDtoNick() {  // Changes nickname of Box1Slot1 Pkm to its OT's Secret ID (
         }
         setCurrentPokemon(&pkm);
     }
-    PK6_LOCATION_1 = (u8*)0x081FEEC8;
+    PK6_LOCATION_1 = (u8*)0x081FEBA0;
 }
 
 /*
