@@ -1,8 +1,3 @@
-Pokemon X/Y/OR/AS Cloning NTR Plugin
-==============
-
-This is an NTR CFW cheat plugin for Pokemon Omega Ruby, Alpha Sapphire, and now X and Y.  Currently, it includes these cheats:
-=======
 Pokemon OR/AS Cloning NTR Plugin
 ==============
 
@@ -38,4 +33,6 @@ NOTE: I'm not exactly sure that all the codes will work for X/Y, since I just up
 
 Original ACNL Cheat plugin by Nanquitas:  https://github.com/Nanquitas/ACNL-NTR-Cheats
 
-Uses code from PokemonCheatPlugin by @hartmannaf (not all of it is implemented yet):  https://github.com/hartmannaf/PokemonCheatPlugin
+Uses code from PokemonCheatPlugin by hartmannaf (not all of it is implemented yet):  https://github.com/hartmannaf/PokemonCheatPlugin
+
+The other encounter modifier codes MIGHT be implemented some time in the near future, so keep an eye out for it!

@@ -515,6 +515,14 @@ void cloneSinglePkm() {  // Clone from slot one to slot 2 only (just one copy)
     cloneSlotOneToSlots(2);
 }
 
+void cloneBoxOneToBoxTwo() {  // Copy all Pokemon from Box 1 into Box 2 (forward)
+    memcpy((u8*) (0x1B30 + 0x08C9E134), (u8*) (0x08C9E134), 0x1B30);
+}
+
+void cloneBoxTwoToBoxOne() {  // Copy all Pokemon from Box 2 back into Box 1 (backward)
+    memcpy((u8*) (0x08C9E134), (u8*) (0x1B30 + 0x08C9E134), 0x1B30);
+}
+
 void shinyB1S1() {
     PK6 pkm;
     PK6_LOCATION_1 = (u8*)0x08C9E134;
@@ -611,6 +619,8 @@ void    initCheatMenu()
     addCheatMenuEntry("Clone Box1Slot1 > entire Box", cloneFillBoxOne, NOTFREEZE);
     addCheatMenuEntry("Clone Slot1 to slots 2-12", cloneThruSlotTwelve, NOTFREEZE);
     addCheatMenuEntry("Clone Slot1 to slot 2", cloneSinglePkm, NOTFREEZE);
+    addCheatMenuEntry("Copy all Box1 mons to Box2 (>>)", cloneBoxOneToBoxTwo, NOTFREEZE);
+    addCheatMenuEntry("Copy all Box2 mons to Box1 (<<)", cloneBoxTwoToBoxOne, NOTFREEZE);
     
     addMenuEntry("-- Slot 1 PC Modifiers --");
     addCheatMenuEntry("Make Pokemon in Box1Slot1 SHINY", shinyB1S1, NOTFREEZE);
@@ -625,7 +635,7 @@ void    initCheatMenu()
     addMenuEntry("=== Toggle codes ===");
     addMenuEntry("-- Encounter modifier codes --");
     addCheatMenuEntry("Force Shiny", shinifyCheat, FREEZE); //  */
-    addMenuEntry(" **More coming soon?");
+    addMenuEntry(" **Randomizer coming soon?");
     updateMenu();
 }
 

@@ -405,104 +405,104 @@ Linker script and memory map
 .hash           0x0010500c       0x2c
  .hash          0x0010500c       0x2c bootloader.o
 
-.rodata.str1.1  0x00105038      0x270
+.rodata.str1.1  0x00105038      0x276
  .rodata.str1.1
-                0x00105038      0x1ce gameplg.o
+                0x00105038      0x1d4 gameplg.o
  .rodata.str1.1
-                0x00105206        0x5 lib\AC.o
+                0x0010520c        0x5 lib\AC.o
  .rodata.str1.1
-                0x0010520b        0x5 lib\main.o
+                0x00105211        0x5 lib\main.o
                                   0x1 (size before relaxing)
  .rodata.str1.1
-                0x0010520b       0x1e lib\pm.o
+                0x00105211       0x1e lib\pm.o
  .rodata.str1.1
-                0x00105229       0x74 lib\rt.o
+                0x0010522f       0x74 lib\rt.o
  .rodata.str1.1
-                0x0010529d        0x6 lib\SOC.o
+                0x001052a3        0x6 lib\SOC.o
  .rodata.str1.1
-                0x001052a3        0x5 lib\srv.o
+                0x001052a9        0x5 lib\srv.o
 
-.rodata         0x001052a8       0x54
- .rodata        0x001052a8       0x4d lib\SOC.o
- *fill*         0x001052f5        0x3 
- .rodata        0x001052f8        0x4 ./lib\libc.a(lib_a-impure.o)
-                0x001052f8                _global_impure_ptr
+.rodata         0x001052b0       0x54
+ .rodata        0x001052b0       0x4d lib\SOC.o
+ *fill*         0x001052fd        0x3 
+ .rodata        0x00105300        0x4 ./lib\libc.a(lib_a-impure.o)
+                0x00105300                _global_impure_ptr
 
-.rodata.str1.4  0x001052fc        0x4
+.rodata.str1.4  0x00105304        0x4
  .rodata.str1.4
-                0x001052fc        0x4 ./lib\libc.a(lib_a-impure.o)
-                0x00105300                . = ALIGN (0x4)
+                0x00105304        0x4 ./lib\libc.a(lib_a-impure.o)
+                0x00105308                . = ALIGN (0x4)
 
-.bss            0x00105300     0x4eb0
+.bss            0x00105308     0x4eb0
  *(.__bss_start)
- .__bss_start   0x00105300        0x0 bootloader.o
-                0x00105300                __c_bss_start
+ .__bss_start   0x00105308        0x0 bootloader.o
+                0x00105308                __c_bss_start
  *(.bss COMMON)
- .bss           0x00105300        0x0 bootloader.o
- .bss           0x00105300        0x8 gameplg.o
-                0x00105300                g_i
-                0x00105304                isNewNtr
- COMMON         0x00105308     0x4e50 gameplg.o
-                0x00105308                g_find
-                0x00105330                g_cheatEnabled
-                0x00105370                gamePluginMenu
-                0x00105fec                g_replace
-                0x00106014                fsUserHandle
-                0x00106018                g_functions
-                0x00106118                threadStack
-                0x0010a118                g_state
- .bss           0x0010a158        0x0 helpers.o
- .bss           0x0010a158       0x20 itemModifier.o
-                0x0010a158                currentEdition
-                0x0010a15c                ItemDataLength
-                0x0010a160                MaxItemID
-                0x0010a164                ItemPointerOffset
-                0x0010a168                KeyItemPointerOffset
-                0x0010a16c                TMHMPointerOffset
-                0x0010a170                MedicinePointerOffset
-                0x0010a174                BerryPointerOffset
- .bss           0x0010a178        0xc otherModifiers.o
-                0x0010a178                MoneyPointerOffset
-                0x0010a17c                RepelPointerOffset
-                0x0010a180                OPowerPointerOffset
- .bss           0x0010a184       0x14 pokeEncounterModifier.o
-                0x0010a184                curEdition
-                0x0010a188                PointerOffset
-                0x0010a18c                EncDataLength
-                0x0010a190                ByteJump
-                0x0010a194                DexOffset
- .bss           0x0010a198        0x0 lib\AC.o
- .bss           0x0010a198        0x0 lib\entry.o
- .bss           0x0010a198        0x0 lib\FS.o
- .bss           0x0010a198        0x0 lib\main.o
- COMMON         0x0010a198        0x4 lib\main.o
-                0x0010a198                IoBaseLcd
- .bss           0x0010a19c        0x0 lib\misc.o
- .bss           0x0010a19c        0x0 lib\OS.o
- .bss           0x0010a19c        0x8 lib\pm.o
-                0x0010a19c                currentPid
-                0x0010a1a0                hCurrentProcess
- .bss           0x0010a1a4        0x0 lib\rt.o
- .bss           0x0010a1a4        0x0 lib\sharedfunc.o
- .bss           0x0010a1a4        0x8 lib\SOC.o
-                0x0010a1a4                SOCU_handle
- .bss           0x0010a1ac        0x4 lib\srv.o
-                0x0010a1ac                srvHandle
- .bss           0x0010a1b0        0x0 lib\stub.o
- .bss           0x0010a1b0        0x0 lib\svc.o
- .bss           0x0010a1b0        0x0 ./lib\libc.a(lib_a-memcpy-stub.o)
- .bss           0x0010a1b0        0x0 ./lib\libc.a(lib_a-memset.o)
- .bss           0x0010a1b0        0x0 ./lib\libc.a(lib_a-rand.o)
- .bss           0x0010a1b0        0x0 ./lib\libc.a(lib_a-strcpy.o)
- .bss           0x0010a1b0        0x0 ./lib\libc.a(lib_a-strlen.o)
- .bss           0x0010a1b0        0x0 ./lib\libc.a(lib_a-impure.o)
- .bss           0x0010a1b0        0x0 ./lib\libgcc.a(_udivsi3.o)
- .bss           0x0010a1b0        0x0 ./lib\libgcc.a(_divsi3.o)
- .bss           0x0010a1b0        0x0 ./lib\libgcc.a(_dvmd_tls.o)
+ .bss           0x00105308        0x0 bootloader.o
+ .bss           0x00105308        0x8 gameplg.o
+                0x00105308                g_i
+                0x0010530c                isNewNtr
+ COMMON         0x00105310     0x4e50 gameplg.o
+                0x00105310                g_find
+                0x00105338                g_cheatEnabled
+                0x00105378                gamePluginMenu
+                0x00105ff4                g_replace
+                0x0010601c                fsUserHandle
+                0x00106020                g_functions
+                0x00106120                threadStack
+                0x0010a120                g_state
+ .bss           0x0010a160        0x0 helpers.o
+ .bss           0x0010a160       0x20 itemModifier.o
+                0x0010a160                currentEdition
+                0x0010a164                ItemDataLength
+                0x0010a168                MaxItemID
+                0x0010a16c                ItemPointerOffset
+                0x0010a170                KeyItemPointerOffset
+                0x0010a174                TMHMPointerOffset
+                0x0010a178                MedicinePointerOffset
+                0x0010a17c                BerryPointerOffset
+ .bss           0x0010a180        0xc otherModifiers.o
+                0x0010a180                MoneyPointerOffset
+                0x0010a184                RepelPointerOffset
+                0x0010a188                OPowerPointerOffset
+ .bss           0x0010a18c       0x14 pokeEncounterModifier.o
+                0x0010a18c                curEdition
+                0x0010a190                PointerOffset
+                0x0010a194                EncDataLength
+                0x0010a198                ByteJump
+                0x0010a19c                DexOffset
+ .bss           0x0010a1a0        0x0 lib\AC.o
+ .bss           0x0010a1a0        0x0 lib\entry.o
+ .bss           0x0010a1a0        0x0 lib\FS.o
+ .bss           0x0010a1a0        0x0 lib\main.o
+ COMMON         0x0010a1a0        0x4 lib\main.o
+                0x0010a1a0                IoBaseLcd
+ .bss           0x0010a1a4        0x0 lib\misc.o
+ .bss           0x0010a1a4        0x0 lib\OS.o
+ .bss           0x0010a1a4        0x8 lib\pm.o
+                0x0010a1a4                currentPid
+                0x0010a1a8                hCurrentProcess
+ .bss           0x0010a1ac        0x0 lib\rt.o
+ .bss           0x0010a1ac        0x0 lib\sharedfunc.o
+ .bss           0x0010a1ac        0x8 lib\SOC.o
+                0x0010a1ac                SOCU_handle
+ .bss           0x0010a1b4        0x4 lib\srv.o
+                0x0010a1b4                srvHandle
+ .bss           0x0010a1b8        0x0 lib\stub.o
+ .bss           0x0010a1b8        0x0 lib\svc.o
+ .bss           0x0010a1b8        0x0 ./lib\libc.a(lib_a-memcpy-stub.o)
+ .bss           0x0010a1b8        0x0 ./lib\libc.a(lib_a-memset.o)
+ .bss           0x0010a1b8        0x0 ./lib\libc.a(lib_a-rand.o)
+ .bss           0x0010a1b8        0x0 ./lib\libc.a(lib_a-strcpy.o)
+ .bss           0x0010a1b8        0x0 ./lib\libc.a(lib_a-strlen.o)
+ .bss           0x0010a1b8        0x0 ./lib\libc.a(lib_a-impure.o)
+ .bss           0x0010a1b8        0x0 ./lib\libgcc.a(_udivsi3.o)
+ .bss           0x0010a1b8        0x0 ./lib\libgcc.a(_divsi3.o)
+ .bss           0x0010a1b8        0x0 ./lib\libgcc.a(_dvmd_tls.o)
  *(.__bss_end)
- .__bss_end     0x0010a1b0        0x0 bootloader.o
-                0x0010a1b0                __c_bss_end
-                0x0010a1b0                __end__ = .
+ .__bss_end     0x0010a1b8        0x0 bootloader.o
+                0x0010a1b8                __c_bss_end
+                0x0010a1b8                __end__ = .
 LOAD bootloader.o
 LOAD gameplg.o
 LOAD helpers.o
@@ -526,8 +526,8 @@ LOAD ./lib\libc.a
 LOAD ./lib\libgcc.a
 OUTPUT(a.out elf32-littlearm)
 
-.dynbss         0x0010a1b0        0x0
- .dynbss        0x0010a1b0        0x0 bootloader.o
+.dynbss         0x0010a1b8        0x0
+ .dynbss        0x0010a1b8        0x0 bootloader.o
 
 .ARM.attributes
                 0x00000000       0x27
@@ -718,36 +718,36 @@ OUTPUT(a.out elf32-littlearm)
  .debug_line    0x00001403      0x4ed lib\SOC.o
  .debug_line    0x000018f0      0x177 lib\srv.o
 
-.debug_str      0x00000000     0x17ef
- .debug_str     0x00000000      0xac0 gameplg.o
-                                0xba0 (size before relaxing)
- .debug_str     0x00000ac0       0x59 helpers.o
-                                0x192 (size before relaxing)
- .debug_str     0x00000b19      0x219 itemModifier.o
-                                0x36c (size before relaxing)
- .debug_str     0x00000d32       0x93 otherModifiers.o
-                                0x1d4 (size before relaxing)
- .debug_str     0x00000dc5      0x161 pokeEncounterModifier.o
-                                0x2b8 (size before relaxing)
- .debug_str     0x00000f26      0x101 lib\AC.o
+.debug_str      0x00000000     0x17ed
+ .debug_str     0x00000000      0xabe gameplg.o
+                                0xb9e (size before relaxing)
+ .debug_str     0x00000abe       0x59 helpers.o
+                                0x190 (size before relaxing)
+ .debug_str     0x00000b17      0x219 itemModifier.o
+                                0x36a (size before relaxing)
+ .debug_str     0x00000d30       0x93 otherModifiers.o
+                                0x1d2 (size before relaxing)
+ .debug_str     0x00000dc3      0x161 pokeEncounterModifier.o
+                                0x2b6 (size before relaxing)
+ .debug_str     0x00000f24      0x101 lib\AC.o
                                 0x1e9 (size before relaxing)
- .debug_str     0x00001027       0x3c lib\entry.o
+ .debug_str     0x00001025       0x3c lib\entry.o
                                 0x14a (size before relaxing)
- .debug_str     0x00001063      0x163 lib\FS.o
+ .debug_str     0x00001061      0x163 lib\FS.o
                                 0x367 (size before relaxing)
- .debug_str     0x000011c6       0x94 lib\main.o
+ .debug_str     0x000011c4       0x94 lib\main.o
                                 0x25f (size before relaxing)
- .debug_str     0x0000125a       0x33 lib\OS.o
+ .debug_str     0x00001258       0x33 lib\OS.o
                                 0x123 (size before relaxing)
- .debug_str     0x0000128d       0xb0 lib\pm.o
+ .debug_str     0x0000128b       0xb0 lib\pm.o
                                 0x229 (size before relaxing)
- .debug_str     0x0000133d      0x1f8 lib\rt.o
+ .debug_str     0x0000133b      0x1f8 lib\rt.o
                                 0x4f0 (size before relaxing)
- .debug_str     0x00001535       0x1e lib\sharedfunc.o
+ .debug_str     0x00001533       0x1e lib\sharedfunc.o
                                 0x22f (size before relaxing)
- .debug_str     0x00001553      0x249 lib\SOC.o
+ .debug_str     0x00001551      0x249 lib\SOC.o
                                 0x420 (size before relaxing)
- .debug_str     0x0000179c       0x53 lib\srv.o
+ .debug_str     0x0000179a       0x53 lib\srv.o
                                 0x1e1 (size before relaxing)
 
 .debug_frame    0x00000000      0xfb0
